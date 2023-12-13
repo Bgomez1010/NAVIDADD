@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseos App</title>
+    <img src="{{ url_for('static', filename='fondo.jpg') }}" alt="Fondo">
+</head>
+<body>
+    <h1>DESEOS NAVIDEÑOS</h1>
+    <form method="POST" action="/">
+        <label for="deseo">Ingresa tu deseo:</label>
+        <input type="text" id="deseo" name="deseo" required>
+        <button type="submit">Enviar Deseo</button>
+    </form>
+
+    <h2>Deseos:</h2>
+    <textarea rows="10" cols="50" readonly>
+        {% for deseo in deseos_sin_similitud %}
+            {{ deseo }}{% if not loop.last %} {% endif %}
+        {% endfor %}
+    </textarea>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Deseos App</title>
+ </head>
+ <body style="background-image: url('{{ url_for('static', filename='fondo.jpg') }}');">
+     <h1>DESEOS NAVIDEÑOS</h1>
+     <form method="POST" action="/">
+         <label for="deseo">Ingresa tu deseo:</label>
+         <input type="text" id="deseo" name="deseo" required>
+         <button type="submit">Enviar Deseo</button>
+     </form>
+ 
+     <h2>Deseos:</h2>
+     <textarea rows="10" cols="50" readonly>
+         {% for deseo in deseos_sin_similitud %}
+             {{ deseo }}{% if not loop.last %} {% endif %}
+         {% endfor %}
+     </textarea>
+ </body>
+ </html>
